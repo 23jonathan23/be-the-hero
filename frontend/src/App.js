@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Routes from './routes'
+
+import './global.css'
 
 function App() {
+
+  //Por padrão o estado só pode ser alterado pela function de atualização
+  //essa função useState, retorna o valor no caso "counter" e a func de atualização
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello OminiStacks 11.0
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes/>
+  )
 }
 
 export default App;
