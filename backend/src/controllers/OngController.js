@@ -2,6 +2,8 @@
 const connection = require('../database/connection')
 const crypto = require('crypto')
 
+const GenerateUniqueId = require('../utils/generateUniqueId')
+
 module.exports = {
  //Function responsável por listar ongs cadastradas
   async index (req, res) {
@@ -22,7 +24,7 @@ module.exports = {
   //Gerando um id para cada cadastro de ongs
   //RandomBytes, parametro quanto bytes
   //convertendo para string do tipo Hexadecimal
-  const id = crypto.randomBytes(4).toString('HEX')
+  const id = GenerateUniqueId()
   //Inserindo dados na tabela ONGS
   //Parametro nome da tabela
   //Aguarda a function terminar a inserção para executar a proxima linha
